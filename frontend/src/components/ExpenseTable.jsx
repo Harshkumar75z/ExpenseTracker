@@ -27,7 +27,7 @@ export function ExpenseTable() {
 
     const fetchExpenses = async () => {
   try {
-    const res = await axios.get("http://localhost:8000/api/v1/expense/getall", { withCredentials: true });
+    const res = await axios.get("https://expensetracker-6vor.onrender.com/api/v1/expense/getall", { withCredentials: true });
     if (res.data.success) {
       dispatch(setExpenses(res.data.expenses)); // overwrite redux
     }
@@ -40,7 +40,7 @@ export function ExpenseTable() {
      const removeHandler = async (expenseId) => {
     try {
       const res = await axios.delete(
-        `http://localhost:8000/api/v1/expense/remove/${expenseId}`,
+        `https://expensetracker-6vor.onrender.com/api/v1/expense/remove/${expenseId}`,
         { withCredentials: true }
       );
 
@@ -123,7 +123,7 @@ export function ExpenseTable() {
 
   try {
     const res = await axios.put(
-      `http://localhost:8000/api/v1/expense/${expenseId}/done`,
+      `https://expensetracker-6vor.onrender.com/api/v1/expense/${expenseId}/done`,
       { done: newStatus },
       {
         headers: { 'Content-Type': 'application/json' },

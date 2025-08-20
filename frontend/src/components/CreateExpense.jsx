@@ -57,7 +57,7 @@ const CreateExpense = () => {
   const submitHandler = async (e) => {
   e.preventDefault()
   try {
-    const res = await axios.post("http://localhost:8000/api/v1/expense/add", formData, {
+    const res = await axios.post("https://expensetracker-6vor.onrender.com/api/v1/expense/add", formData, {
       headers:{
         'Content-Type':'application/json'
       },

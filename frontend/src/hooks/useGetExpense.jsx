@@ -11,7 +11,7 @@ const useGetExpense = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/v1/expense/getall", {
+        const res = await axios.get("https://expensetracker-6vor.onrender.com/api/v1/expense/getall", {
           params: { category, done: markAsDone },
           // No need to set withCredentials here if already set globally
         });

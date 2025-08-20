@@ -70,7 +70,7 @@ const UpdateExpense = ({ expense }) => {
     e.preventDefault();
     try {
       const res = await axios.put(
-        `http://localhost:8000/api/v1/expense/update/${expense._id}`,
+        `https://expensetracker-6vor.onrender.com/api/v1/expense/update/${expense._id}`,
         formData,
         {
           headers: {

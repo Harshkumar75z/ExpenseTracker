@@ -17,7 +17,7 @@ const _dirname = path.resolve();
 
 // middlewares
 app.use(cors({
-  origin: "http://localhost:5173", // your frontend URL
+  origin: "https://expensetracker-6vor.onrender.com", // your frontend URL
   credentials: true
 }));
 
